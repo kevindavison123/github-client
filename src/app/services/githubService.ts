@@ -1,8 +1,8 @@
 import { Octokit } from "octokit";
+import {API_URLS} from "@/app/config/apitUrls";
 
 const octokit = new Octokit({});
-const USER_URL = "GET /users/{username}/repos";
-const ORG_URL = "GET /orgs/{org}/repos";
+
 export const getRepos = async (
   queryValue = "",
   callType: string,
@@ -11,7 +11,7 @@ export const getRepos = async (
   direction: string,
   page: string,
 ) => {
-  let baseUrl = USER_URL;
+  let baseUrl = API_URLS.USER_URL;
   const params = {
     sort: sort,
     per_page: per_page,
@@ -19,7 +19,7 @@ export const getRepos = async (
     page: page,
   };
   if (callType === "org") {
-    baseUrl = ORG_URL;
+    baseUrl = API_URLS.ORG_URL;
     params["org"] = queryValue;
   } else {
     params["username"] = queryValue;
