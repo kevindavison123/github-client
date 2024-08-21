@@ -25,7 +25,7 @@ export default function Home() {
   const [source, setSource] = useState();
   function validateInput(value) {
     let error;
-    if (!value || value === '') {
+    if (!value || value === "") {
       error = "Input is required";
     }
     return error;
@@ -71,7 +71,9 @@ export default function Home() {
                       Please type a Github username or org name
                     </FormLabel>
                     <Input {...field} placeholder="username or org" size="lg" />
-                    <FormErrorMessage size='lg'>{form.errors.name}</FormErrorMessage>
+                    <FormErrorMessage size="lg">
+                      {form.errors.name}
+                    </FormErrorMessage>
                   </FormControl>
                 )}
               </Field>
