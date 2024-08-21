@@ -16,7 +16,7 @@ import {
   Select,
 } from "@chakra-ui/react";
 import { Field, Form, Formik } from "formik";
-import { getRepos } from "@/app/services/githubService";
+import { getRepos } from "@/app/services/githubApiService";
 import { useState } from "react";
 import RepoTable from "@/app/components/RepoTable";
 

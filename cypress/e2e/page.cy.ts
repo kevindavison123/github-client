@@ -1,6 +1,6 @@
 import {jest} from "@jest/globals";
 import usernameJson from '../fixtures/username_json.json';
-import {getRepos} from "../../src/app/services/githubService";
+import {getRepos} from "../../src/app/services/githubApiService";
 
 
 describe('Home Page', () => {
